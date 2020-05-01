@@ -1,0 +1,63 @@
+:root{
+    --default-font-color: #000000;
+    --main-bg-color: #F9F9F9;
+    --border-color: rgb(228, 228, 228);
+    --btn-blue: #3A84E3;
+    --bar: #f9f9f9;
+}
+
+@font-face{
+    font-family: 'Lato';
+    src: url(../font/Lato-Light.ttf);
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: 'Lato';
+    src: url(../font/Lato-Regular.ttf);
+    font-weight: 800;
+}
+
+@font-face{
+    font-family: 'Lato';
+    src: url(../font/Light-Bold.ttf);
+    font-weight: bold;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Lato';
+    font-weight: 800;
+    color: var(--default-font-color);
+    box-sizing: border-box;
+    outline: none;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        'logo logo'
+        'header header'
+        'sidenav content'
+        'news news'
+        'footer footer'        
+    ;
+    @media screen and (max-width: 760px) {
+        grid-template-areas: 
+            'logo logo'
+            'header header'
+            'sidenav sidenav'
+            'content content'
+            'news news'
+            'footer footer'        
+        ;
+    }
+}
